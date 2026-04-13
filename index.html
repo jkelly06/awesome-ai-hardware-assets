@@ -30,12 +30,7 @@
             --blue: #58a6ff;
             --green: #3fb950;
             --gold: #d29922;
-            /* LARGER FONT SCALE */
             --font-base: 20px; 
-            --font-h1: 3.5rem;
-            --font-h2: 2.2rem;
-            --font-h3: 1.6rem;
-            --font-body: 1.25rem;
         }
 
         body {
@@ -56,14 +51,14 @@
             text-align: center;
         }
 
-        h1 { font-size: var(--font-h1); margin: 0; letter-spacing: -1px; }
+        h1 { font-size: 3.5rem; margin: 0; letter-spacing: -1px; }
         .subtitle { color: var(--text-dim); font-size: 1.5rem; margin-top: 15px; }
 
         .btn-download {
             display: inline-block;
             background: var(--blue);
             color: #ffffff;
-            padding: 20px 40px;
+            padding: 22px 45px;
             text-decoration: none;
             border-radius: 8px;
             font-weight: bold;
@@ -71,12 +66,12 @@
             margin-top: 30px;
             transition: transform 0.2s;
         }
-        .btn-download:hover { transform: scale(1.02); }
+        .btn-download:hover { transform: scale(1.02); background: #1f6feb; }
 
         .section-title {
-            font-size: var(--font-h2);
+            font-size: 2.2rem;
             color: var(--blue);
-            margin-top: 60px;
+            margin-top: 70px;
             margin-bottom: 30px;
             border-left: 5px solid var(--blue);
             padding-left: 20px;
@@ -96,15 +91,13 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            transition: border-color 0.3s;
         }
-        .asset-card:hover { border-color: var(--blue); }
 
         .domain-name { font-size: 1.4rem; font-family: 'SFMono-Regular', Consolas, monospace; font-weight: 600; }
         .price { font-size: 1.5rem; color: var(--green); font-weight: 800; }
 
         .thesis-box {
-            background: linear-gradient(145deg, #1c2128, #161b22);
+            background: #1c2128;
             padding: 40px;
             border-radius: 15px;
             border: 1px solid var(--border);
@@ -129,13 +122,14 @@
             color: white;
             font-size: 1.2rem;
             border-radius: 8px;
+            box-sizing: border-box;
         }
 
         button {
             background: var(--green);
             color: white;
             border: none;
-            padding: 20px;
+            padding: 22px;
             border-radius: 8px;
             cursor: pointer;
             font-size: 1.4rem;
@@ -163,7 +157,7 @@
 <div class="container">
     <header>
         <h1>2026 Sovereign Compute Registry</h1>
-        <p class="subtitle">Institutional M&A Portfolio: <a href="https://opticalprocessingunit.com" style="color:var(--blue); text-decoration:none;">opticalprocessingunit.com</a></p>
+        <p class="subtitle">Official Registry: <a href="https://opticalprocessingunit.com" style="color:var(--blue); text-decoration:none;">opticalprocessingunit.com</a></p>
         <a href="prospectus-2026-sovereign-compute.pdf" class="btn-download" onclick="trackDownload()" download>📥 Download Master Prospectus (PDF)</a>
     </header>
 
@@ -217,9 +211,9 @@
             <h2 style="margin-top:0;">Institutional Inquiry</h2>
             <p style="font-size: 1.4rem;">Registry Contact: <strong>ceall06@proton.me</strong></p>
             <form action="https://formspree.io/f/mkokwebb" method="POST">
-                <input type="hidden" name="_subject" value="Registry Inquiry: OpticalProcessingUnit.com">
-                <input type="email" name="email" placeholder="Corporate Email (e.g., name@nvidia.com)" required>
-                <textarea name="message" rows="5" placeholder="Strategic proposal or technical prospectus request..." required></textarea>
+                <input type="hidden" name="_subject" value="Registry Inquiry: Institutional">
+                <input type="email" name="email" placeholder="Corporate Email Address" required>
+                <textarea name="message" rows="5" placeholder="Strategic proposal or acquisition request..." required></textarea>
                 <button type="submit">Initialize Acquisition Dialogue</button>
             </form>
         </div>
@@ -233,7 +227,6 @@
 
 </body>
 </html>
-
     
          
 
