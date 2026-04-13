@@ -1,2 +1,25 @@
 User-agent: *
 Allow: /
+
+# Allow AI Search & Citations (AI Search Engine Optimization)
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+# Block AI Training Crawlers (Protect your IP from being used as training data)
+User-agent: GPTBot
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: AnthropicAI
+Disallow: /
+
+# Link to your sitemap for better indexing
+Sitemap: https://opticalprocessingunit.com/sitemap.xml
