@@ -1,3 +1,11 @@
+# 🛡️ AI Infrastructure Registry (2026)
+
+| Category | Primary Asset | Connectivity | Compute |
+| :--- | :--- | :--- | :--- |
+| **Silicon Photonics** | [OpticalProcessingUnit.com](https://opticalprocessingunit.com) | [OCSFabric.com](https://ocsfabric.com) | [OPUCluster.com](https://opucluster.com) |
+| **Heterogeneous AI** | [AgenticXPU.com](https://agenticxpu.com) | [PhotonicBus.com](https://photonicbus.com) | [XPUinference.com](https://xpuinference.com) |
+
+
 # 🛡️ Next-Gen Compute Infrastructure Registry (2026)
 
 Strategic asset portfolio focusing on **Heterogeneous Compute (XPU)**, **Silicon Photonics (OPU/CPO)**, and **Quantum-Centric Mesh (QPU)**.
