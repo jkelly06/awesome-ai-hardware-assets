@@ -11,12 +11,8 @@
       gtag('js', new Date());
       gtag('config', 'G-XXXXXXXXXX');
 
-      // TRACK PROSPECTUS DOWNLOADS
       function trackDownload() {
-        gtag('event', 'download', {
-          'event_category': 'prospectus',
-          'event_label': 'sovereign-compute-2026'
-        });
+        gtag('event', 'download', { 'event_category': 'prospectus', 'event_label': 'sovereign-compute-2026' });
       }
     </script>
 
@@ -26,62 +22,212 @@
 
     <style>
         :root {
-            --bg: #0d1117; --card: #161b22; --border: #30363d;
-            --text-main: #c9d1d9; --text-dim: #8b949e;
-            --blue: #58a6ff; --green: #3fb950; --gold: #d29922;
+            --bg: #0d1117;
+            --card: #161b22;
+            --border: #30363d;
+            --text-main: #f0f6fc;
+            --text-dim: #8b949e;
+            --blue: #58a6ff;
+            --green: #3fb950;
+            --gold: #d29922;
+            /* LARGER FONT SCALE */
+            --font-base: 20px; 
+            --font-h1: 3.5rem;
+            --font-h2: 2.2rem;
+            --font-h3: 1.6rem;
+            --font-body: 1.25rem;
         }
-        body { background-color: var(--bg); color: var(--text-main); font-family: -apple-system, sans-serif; margin: 0; line-height: 1.6; }
-        .container { max-width: 1000px; margin: 0 auto; padding: 40px 20px; }
-        header { border-bottom: 1px solid var(--border); padding-bottom: 40px; }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text-main);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            margin: 0;
+            line-height: 1.6;
+            font-size: var(--font-base);
+        }
+
+        .container { max-width: 1100px; margin: 0 auto; padding: 60px 20px; }
+
+        header {
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 50px;
+            margin-bottom: 50px;
+            text-align: center;
+        }
+
+        h1 { font-size: var(--font-h1); margin: 0; letter-spacing: -1px; }
+        .subtitle { color: var(--text-dim); font-size: 1.5rem; margin-top: 15px; }
+
         .btn-download {
-            display: inline-block; background: var(--blue); color: #fff;
-            padding: 15px 30px; text-decoration: none; border-radius: 6px;
-            font-weight: bold; margin-top: 25px;
+            display: inline-block;
+            background: var(--blue);
+            color: #ffffff;
+            padding: 20px 40px;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 1.4rem;
+            margin-top: 30px;
+            transition: transform 0.2s;
         }
+        .btn-download:hover { transform: scale(1.02); }
+
+        .section-title {
+            font-size: var(--font-h2);
+            color: var(--blue);
+            margin-top: 60px;
+            margin-bottom: 30px;
+            border-left: 5px solid var(--blue);
+            padding-left: 20px;
+        }
+
+        .asset-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+            gap: 20px;
+        }
+
         .asset-card {
-            background: var(--card); border: 1px solid var(--border);
-            padding: 15px 20px; border-radius: 8px; margin-bottom: 10px;
-            display: flex; justify-content: space-between; align-items: center;
+            background: var(--card);
+            border: 1px solid var(--border);
+            padding: 25px 30px;
+            border-radius: 12px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: border-color 0.3s;
         }
-        .domain-name { font-family: monospace; font-weight: bold; }
-        .price { color: var(--green); font-weight: bold; }
-        .contact-form { background: var(--card); padding: 40px; border-radius: 8px; margin-top: 60px; border: 1px solid var(--border); }
-        input, textarea { width: 100%; padding: 12px; margin: 10px 0; background: var(--bg); border: 1px solid var(--border); color: white; border-radius: 4px; }
-        button { background: var(--green); color: white; border: none; padding: 15px 30px; border-radius: 6px; cursor: pointer; width: 100%; font-weight: bold; }
+        .asset-card:hover { border-color: var(--blue); }
+
+        .domain-name { font-size: 1.4rem; font-family: 'SFMono-Regular', Consolas, monospace; font-weight: 600; }
+        .price { font-size: 1.5rem; color: var(--green); font-weight: 800; }
+
+        .thesis-box {
+            background: linear-gradient(145deg, #1c2128, #161b22);
+            padding: 40px;
+            border-radius: 15px;
+            border: 1px solid var(--border);
+            font-size: 1.4rem;
+            margin-bottom: 50px;
+        }
+
+        .contact-form {
+            background: var(--card);
+            padding: 50px;
+            border-radius: 15px;
+            border: 1px solid var(--border);
+            margin-top: 80px;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 18px;
+            margin: 15px 0;
+            background: var(--bg);
+            border: 1px solid var(--border);
+            color: white;
+            font-size: 1.2rem;
+            border-radius: 8px;
+        }
+
+        button {
+            background: var(--green);
+            color: white;
+            border: none;
+            padding: 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1.4rem;
+            font-weight: bold;
+            width: 100%;
+        }
+
+        footer {
+            text-align: center;
+            padding: 80px 0;
+            color: var(--text-dim);
+            font-size: 1.1rem;
+            border-top: 1px solid var(--border);
+        }
+
+        @media (max-width: 600px) {
+            h1 { font-size: 2.2rem; }
+            .asset-grid { grid-template-columns: 1fr; }
+            .domain-name { font-size: 1.1rem; }
+        }
     </style>
 </head>
 <body>
 
 <div class="container">
     <header>
-        <h1>Next-Gen Compute Infrastructure Prospectus</h1>
-        <p>Official Registry: <a href="https://opticalprocessingunit.com" style="color: var(--blue);">opticalprocessingunit.com</a></p>
-        <a href="prospectus-2026-sovereign-compute.pdf" class="btn-download" onclick="trackDownload()" download>📥 Download Strategic Prospectus (PDF)</a>
+        <h1>2026 Sovereign Compute Registry</h1>
+        <p class="subtitle">Institutional M&A Portfolio: <a href="https://opticalprocessingunit.com" style="color:var(--blue); text-decoration:none;">opticalprocessingunit.com</a></p>
+        <a href="prospectus-2026-sovereign-compute.pdf" class="btn-download" onclick="trackDownload()" download>📥 Download Master Prospectus (PDF)</a>
     </header>
 
     <main>
-        <div style="margin: 40px 0;">
-            <h2 style="color: var(--blue);">Asset Registry</h2>
-            <div class="asset-card" style="border-color: var(--gold);"><span class="domain-name">opticalprocessingunit.com</span><span class="price">$250,000</span></div>
+        <div class="thesis-box">
+            <h2 style="margin-top:0; font-size: 1.8rem;">Market Thesis</h2>
+            <p>The 2026 AI infrastructure pivot demands a transition to <strong>Silicon Photonics</strong> and <strong>Heterogeneous XPU</strong> fabrics. This registry contains the primary namespaces defining the next-generation hardware stack.</p>
+        </div>
+
+        <h2 class="section-title">The Category Anchor</h2>
+        <div class="asset-card" style="border: 2px solid var(--gold); padding: 40px;">
+            <span class="domain-name" style="font-size: 2rem;">opticalprocessingunit.com</span>
+            <span class="price" style="font-size: 2.2rem;">$250,000</span>
+        </div>
+
+        <h2 class="section-title">Optical Circuit Switching & Fabric</h2>
+        <div class="asset-grid">
             <div class="asset-card"><span class="domain-name">ocsfabric.com</span><span class="price">$75,000</span></div>
+            <div class="asset-card"><span class="domain-name">photonicbus.com</span><span class="price">$45,000</span></div>
+            <div class="asset-card"><span class="domain-name">cposwitch.com</span><span class="price">$35,000</span></div>
+            <div class="asset-card"><span class="domain-name">ocsstack.com</span><span class="price">$25,000</span></div>
+            <div class="asset-card"><span class="domain-name">opufabric.com</span><span class="price">$18,500</span></div>
+        </div>
+
+        <h2 class="section-title">Logic, Inference & Agents</h2>
+        <div class="asset-grid">
             <div class="asset-card"><span class="domain-name">xpuinference.com</span><span class="price">$65,000</span></div>
             <div class="asset-card"><span class="domain-name">agenticxpu.com</span><span class="price">$45,000</span></div>
-            <div class="asset-card"><span class="domain-name">photonicbus.com</span><span class="price">$45,000</span></div>
-            </div>
+            <div class="asset-card"><span class="domain-name">cpocampus.com</span><span class="price">$20,000</span></div>
+        </div>
+
+        <h2 class="section-title">OPU Compute & Nodes</h2>
+        <div class="asset-grid">
+            <div class="asset-card"><span class="domain-name">opucluster.com</span><span class="price">$25,000</span></div>
+            <div class="asset-card"><span class="domain-name">opuarray.com</span><span class="price">$18,500</span></div>
+            <div class="asset-card"><span class="domain-name">opunode.com</span><span class="price">$12,500</span></div>
+            <div class="asset-card"><span class="domain-name">opustack.com</span><span class="price">$12,500</span></div>
+        </div>
+
+        <h2 class="section-title">Quantum (QPU) Infrastructure</h2>
+        <div class="asset-grid">
+            <div class="asset-card"><span class="domain-name">qpucluster.com</span><span class="price">$25,000</span></div>
+            <div class="asset-card"><span class="domain-name">qpufabric.com</span><span class="price">$18,500</span></div>
+            <div class="asset-card"><span class="domain-name">qpuarray.com</span><span class="price">$12,500</span></div>
+            <div class="asset-card"><span class="domain-name">photonqpu.com</span><span class="price">$12,500</span></div>
+            <div class="asset-card"><span class="domain-name">qpugrid.com</span><span class="price">$10,000</span></div>
+            <div class="asset-card"><span class="domain-name">qpumesh.com</span><span class="price">$10,000</span></div>
+        </div>
 
         <div class="contact-form">
-            <h2>Institutional Inquiry</h2>
-            <p>Direct Contact: <strong>ceall06@proton.me</strong></p>
+            <h2 style="margin-top:0;">Institutional Inquiry</h2>
+            <p style="font-size: 1.4rem;">Registry Contact: <strong>ceall06@proton.me</strong></p>
             <form action="https://formspree.io/f/mkokwebb" method="POST">
-                <input type="email" name="email" placeholder="Corporate Email Address" required>
-                <textarea name="message" rows="5" placeholder="Proposal details..." required></textarea>
-                <button type="submit">Submit Inquiry</button>
+                <input type="hidden" name="_subject" value="Registry Inquiry: OpticalProcessingUnit.com">
+                <input type="email" name="email" placeholder="Corporate Email (e.g., name@nvidia.com)" required>
+                <textarea name="message" rows="5" placeholder="Strategic proposal or technical prospectus request..." required></textarea>
+                <button type="submit">Initialize Acquisition Dialogue</button>
             </form>
         </div>
     </main>
 
-    <footer style="text-align: center; padding: 40px; color: var(--text-dim); font-size: 0.8rem;">
-        © 2026 Sovereign Hardware Group | Transfer via Escrow.com
+    <footer>
+        <p>Transfer via Secure Escrow: Escrow.com / Dan.com</p>
+        <p>© 2026 Sovereign Hardware Group</p>
     </footer>
 </div>
 
