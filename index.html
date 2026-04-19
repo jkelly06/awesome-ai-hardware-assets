@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -37,7 +37,6 @@
         .section-title { font-size: 2.2rem; color: var(--blue); margin-top: 70px; margin-bottom: 30px; border-left: 5px solid var(--blue); padding-left: 20px; }
         .asset-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(450px, 1fr)); gap: 20px; }
         
-        /* THE FIX: Added word-wrap and responsive sizing */
         .asset-card { 
             background: var(--card); border: 1px solid var(--border); 
             padding: 25px 30px; border-radius: 12px; 
@@ -53,7 +52,6 @@
         button { background: var(--green); color: white; border: none; padding: 22px; border-radius: 8px; cursor: pointer; font-size: 1.4rem; font-weight: bold; width: 100%; }
         footer { text-align: center; padding: 80px 0; color: var(--text-dim); font-size: 1.1rem; border-top: 1px solid var(--border); }
 
-        /* SPECIFIC MOBILE ADJUSTMENTS */
         @media (max-width: 600px) { 
             h1 { font-size: 2.2rem; } 
             .container { padding: 30px 15px; }
@@ -62,7 +60,7 @@
             .domain-name { font-size: 1.1rem; padding-right: 0; padding-bottom: 10px; }
             .price { font-size: 1.3rem; }
             .section-title { font-size: 1.6rem; }
-            .anchor-domain { font-size: 1.5rem !important; } /* Shrinks the main gold domain on mobile */
+            .anchor-domain { font-size: 1.5rem !important; }
         }
     </style>
 </head>
@@ -78,7 +76,7 @@
     <main>
         <div class="thesis-box">
             <h2 style="margin-top:0; font-size: 1.8rem;">Market Thesis</h2>
-            <p>The 2026 AI infrastructure pivot demands a transition to <strong>Silicon Photonics</strong> and <strong>Heterogeneous XPU</strong> fabrics. This registry contains the primary namespaces defining the next-generation hardware stack.</p>
+            <p>The 2026 AI infrastructure pivot demands a transition to <strong>Silicon Photonics</strong>, <strong>SMR-backed Energy</strong>, and <strong>Heterogeneous XPU</strong> fabrics. This registry contains the primary namespaces defining the next-generation hardware stack.</p>
         </div>
 
         <h2 class="section-title">The Category Anchor</h2>
@@ -103,8 +101,10 @@
             <div class="asset-card"><span class="domain-name">cpocampus.com</span><span class="price">$20,000</span></div>
         </div>
 
-        <h2 class="section-title">OPU Compute & Nodes</h2>
+        <h2 class="section-title">Power, Compute & Core Nodes</h2>
         <div class="asset-grid">
+            <div class="asset-card"><span class="domain-name">terawattcore.com</span><span class="price">$50,000</span></div>
+            <div class="asset-card"><span class="domain-name">exawattcore.com</span><span class="price">$35,000</span></div>
             <div class="asset-card"><span class="domain-name">opucluster.com</span><span class="price">$25,000</span></div>
             <div class="asset-card"><span class="domain-name">opuarray.com</span><span class="price">$18,500</span></div>
             <div class="asset-card"><span class="domain-name">opunode.com</span><span class="price">$12,500</span></div>
