@@ -27,82 +27,112 @@
         .container { max-width: 900px; margin: 0 auto; padding: 60px 20px; }
         
         /* Typography */
-        h1 { font-size: 3rem; margin: 0; letter-spacing: -2px; color: var(--blue); line-height: 1.1; }
-        h2 { font-size: 1.8rem; border-bottom: 1px solid var(--border); padding-bottom: 10px; margin-top: 50px; color: #fff; }
-        h3 { color: var(--blue); margin-bottom: 5px; font-size: 1.3rem; }
-        p, li { font-size: 1.2rem; color: var(--text-main); }
+        h1 { font-size: 3.2rem; margin: 0; letter-spacing: -2px; color: var(--blue); line-height: 1.1; }
+        h2 { font-size: 1.8rem; border-bottom: 1px solid var(--border); padding-bottom: 10px; margin-top: 60px; color: #fff; text-transform: uppercase; letter-spacing: 1px; }
+        h3 { color: var(--blue); margin-top: 30px; margin-bottom: 10px; font-size: 1.4rem; }
+        p, li { font-size: 1.25rem; color: var(--text-main); }
         ul { list-style: none; padding: 0; }
-        li { margin-bottom: 10px; }
+        li { margin-bottom: 12px; }
         .hr-divider { border: 0; border-top: 1px solid var(--border); margin: 60px 0; }
+        .emphasis { color: #fff; font-weight: 600; }
+        .large-callout { font-size: 1.6rem; color: var(--blue); margin: 30px 0; font-weight: 700; text-align: center; border: 1px solid var(--border); padding: 20px; border-radius: 8px; }
 
         /* Hero Image */
         .visual-anchor { width: 100%; height: auto; border-radius: 12px; margin: 40px 0; border: 1px solid var(--border); display: block; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
 
-        /* Custom Styles */
-        .hero-box { text-align: left; }
-        .bullet-list li::before { content: "• "; color: var(--blue); font-weight: bold; }
-        
+        /* Asset Layout */
         .asset-item { margin-bottom: 30px; }
-        .asset-name { font-family: monospace; font-size: 1.4rem; font-weight: bold; color: var(--gold); }
-        .asset-desc { color: var(--text-dim); display: block; margin-top: 5px; }
+        .asset-name { font-family: monospace; font-size: 1.45rem; font-weight: bold; color: var(--gold); }
+        .asset-desc { color: var(--text-dim); display: block; margin-top: 5px; font-size: 1.1rem; }
         
-        .extension-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 10px; font-family: monospace; }
-        .extension-item { background: var(--card); padding: 10px 15px; border-radius: 4px; border: 1px solid var(--border); font-size: 1rem; }
+        .extension-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 10px; font-family: monospace; }
+        .extension-item { background: var(--card); padding: 12px 15px; border-radius: 4px; border: 1px solid var(--border); font-size: 1rem; }
 
         .btn-download { display: inline-block; background: transparent; color: var(--blue); padding: 15px 30px; text-decoration: none; border: 1px solid var(--blue); border-radius: 6px; font-weight: bold; font-size: 1.1rem; margin-top: 20px; transition: 0.3s; }
         .btn-download:hover { background: var(--blue); color: #fff; }
 
-        .contact-form { background: var(--card); padding: 40px; border-radius: 12px; border: 1px solid var(--border); margin-top: 40px; }
-        input, textarea { width: 100%; padding: 15px; margin: 10px 0; background: var(--bg); border: 1px solid var(--border); color: white; border-radius: 6px; box-sizing: border-box; font-size: 1rem; }
-        button { background: var(--green); color: white; border: none; padding: 20px; border-radius: 6px; cursor: pointer; font-size: 1.2rem; font-weight: bold; width: 100%; margin-top: 10px; }
+        .contact-form { background: var(--card); padding: 50px; border-radius: 12px; border: 1px solid var(--border); margin-top: 50px; }
+        input, textarea { width: 100%; padding: 18px; margin: 15px 0; background: var(--bg); border: 1px solid var(--border); color: white; border-radius: 8px; box-sizing: border-box; font-size: 1.1rem; }
+        button { background: var(--green); color: white; border: none; padding: 22px; border-radius: 8px; cursor: pointer; font-size: 1.3rem; font-weight: bold; width: 100%; margin-top: 15px; }
         
         @media (max-width: 600px) { 
             h1 { font-size: 2.2rem; } 
             .container { padding: 40px 15px; }
             .extension-grid { grid-template-columns: 1fr; } 
+            .large-callout { font-size: 1.3rem; }
         }
     </style>
 </head>
 <body>
 
 <div class="container">
-    <header class="hero-box">
+    <header>
         <h1>OPTICALPROCESSINGUNIT.COM</h1>
-        <p style="font-size: 1.4rem; color: var(--text-dim); margin-top: 15px;">Category-defining domains for photonic and optical AI infrastructure.</p>
+        <p style="font-size: 1.4rem; color: var(--text-dim); margin-top: 15px;">Strategic registry of optical, photonic, and next-generation compute infrastructure assets.</p>
         
-        <p>Designed for:</p>
-        <ul class="bullet-list">
+        <p class="emphasis">Designed for:</p>
+        <ul style="border-left: 2px solid var(--blue); padding-left: 20px;">
             <li>Silicon photonics platforms</li>
             <li>Optical interconnect and switching systems</li>
             <li>XPU / heterogeneous compute infrastructure</li>
             <li>Sovereign and next-generation hardware stacks</li>
         </ul>
-        <p style="font-style: italic; color: var(--text-dim); margin-top: 25px;">As AI scales, the bottleneck is shifting from raw compute to bandwidth, power efficiency, and interconnect architecture.</p>
+        <p style="font-style: italic; color: var(--text-dim); margin-top: 25px;">As AI scales, the bottleneck is shifting from raw compute to bandwidth, switching efficiency, and power density.</p>
     </header>
 
     <img src="infrastructure-visual.png" alt="Sovereign Photonic AI Infrastructure" class="visual-anchor">
 
-    <hr class="hr-divider">
-
     <section>
-        <h2>Market Thesis</h2>
-        <p>AI infrastructure is entering a new hardware cycle.</p>
-        <p>As model scale increases, performance is no longer defined by compute alone. It is increasingly determined by memory movement, interconnect speed, switching efficiency, and power density.</p>
-        <p>This is driving adoption of:</p>
-        <ul class="bullet-list">
-            <li>Silicon photonics</li>
-            <li>Optical circuit switching</li>
-            <li>Heterogeneous XPU architectures</li>
-            <li>New processing and interconnect layers</li>
+        <h2>Executive Thesis</h2>
+        <p>Artificial intelligence has entered a new infrastructure constraint cycle.</p>
+        <p>For the past decade, performance scaled with compute. That model is breaking. The limiting factor is no longer compute alone. <span class="emphasis">It is movement.</span></p>
+        <p>As AI systems scale, the cost of moving data exceeds the cost of processing it. Interconnect bandwidth, switching speed, and energy efficiency are now the dominant constraints.</p>
+        
+        <h3>Electronic systems are reaching physical limits:</h3>
+        <ul style="border-left: 2px solid var(--gold); padding-left: 20px;">
+            <li>heat generation</li>
+            <li>resistance</li>
+            <li>signal latency</li>
+            <li>power density</li>
         </ul>
-        <p><strong>The naming layer for this hardware stack is forming now.</strong></p>
+        
+        <div class="large-callout">This is driving a structural shift toward:<br>OPTICAL AND PHOTONIC INFRASTRUCTURE</div>
     </section>
 
-    <hr class="hr-divider">
+    <section>
+        <h2>The Infrastructure Shift</h2>
+        <p>Optical systems use light instead of electrons to move and process data.</p>
+        <p>This enables significantly higher bandwidth, lower latency, and reduced energy consumption. Photonic processors and optical switching are moving from research into deployment.</p>
+        <p class="emphasis">This is not theoretical. It is already being integrated into AI and high-performance computing systems.</p>
+    </section>
+
+    <section>
+        <h2>The New Stack</h2>
+        <p>Next-generation compute is being redefined across three layers:</p>
+        
+        <p><strong style="color:var(--blue)">Processing Layer:</strong> Optical Processing Units (OPUs) and heterogeneous XPUs</p>
+        <p><strong style="color:var(--blue)">Interconnect Layer:</strong> Optical circuit switching (OCS), photonic buses, and fabric architectures</p>
+        <p><strong style="color:var(--blue)">System Layer:</strong> Clusters, arrays, and distributed compute systems built around optical movement</p>
+        
+        <p>Performance is no longer defined by compute. It is defined by <span class="emphasis">how efficiently data moves through the system.</span></p>
+    </section>
+
+    <section>
+        <h2>Category Formation</h2>
+        <p>This defines a new category: <span class="emphasis">movement-constrained compute infrastructure.</span></p>
+        <p>The naming layer for this category is forming now. Naming decisions determine architecture identity, platform positioning, and long-term control of system language. Once infrastructure is deployed and standardized, naming becomes fixed.</p>
+    </section>
+
+    <section>
+        <h2>Timing</h2>
+        <p>The current market window is asymmetric.</p>
+        <p><strong style="color:var(--gold)">Early acquisition enables:</strong> Control of category language, alignment with hardware deployment cycles, and strategic positioning before standardization.</p>
+        <p><strong style="color:var(--text-dim)">Late acquisition results in:</strong> Limited availability, fragmented ownership, and premium pricing.</p>
+    </section>
 
     <section>
         <h2>Best Fit For</h2>
-        <ul class="bullet-list">
+        <ul style="border-left: 2px solid var(--blue); padding-left: 20px;">
             <li>Silicon photonics startups</li>
             <li>Optical interconnect and switching platforms</li>
             <li>XPU / heterogeneous compute companies</li>
@@ -110,8 +140,6 @@
             <li>Infrastructure buyers seeking category-level control</li>
         </ul>
     </section>
-
-    <hr class="hr-divider">
 
     <section>
         <h2>Featured Assets</h2>
@@ -168,31 +196,17 @@
     <hr class="hr-divider">
 
     <section>
-        <h2>Why This Window Matters</h2>
-        <p>As next-generation hardware categories mature, naming decisions are made early.</p>
-        <p>Once a platform, architecture, or interconnect layer is branded, comparable assets become harder to replace and more expensive to assemble.</p>
-        <p><strong>Early acquisition secures positioning. Late acquisition requires compromise.</strong></p>
+        <h2>Final Position</h2>
+        <p>The next phase of AI will not be defined by compute alone. It will be defined by how data moves, how systems connect, and how infrastructure is architected.</p>
+        <p class="emphasis">The entities that control these layers will define the next generation of computing. This portfolio is aligned with that outcome.</p>
     </section>
 
     <section>
         <h2>Acquisition Structure</h2>
-        <h3 style="color:var(--blue); margin-bottom: 10px;">Individual Asset Acquisition</h3>
-        <ul class="bullet-list">
-            <li>Select assets available individually</li>
-            <li>Typical range: $12,500 – $250,000+ depending on strategic fit</li>
-        </ul>
-        
-        <h3 style="color:var(--blue); margin-bottom: 10px;">Strategic Bundle Acquisition</h3>
-        <ul class="bullet-list">
-            <li>Curated domain groupings across photonics, OPU, XPU, and QPU layers</li>
-            <li>Typical range: mid five-figure to low six-figure valuations</li>
-        </ul>
-
-        <h3 style="color:var(--blue); margin-bottom: 10px;">Full Registry Acquisition (Preferred)</h3>
-        <ul class="bullet-list">
-            <li>Complete ownership of the opticalprocessingunit.com registry stack</li>
-        </ul>
-        <p style="font-size: 1rem; color: var(--text-dim);">Portfolio-level discussions are prioritized over individual asset transactions. Selective availability applies to primary assets.</p>
+        <p><strong>Individual Asset Acquisition:</strong> Typical range $12,500 – $250,000+ depending on strategic fit.</p>
+        <p><strong>Strategic Bundle Acquisition:</strong> Curated groupings across photonics, OPU, XPU, and QPU layers.</p>
+        <p><strong>Full Registry Acquisition (Preferred):</strong> Complete ownership of the opticalprocessingunit.com registry stack.</p>
+        <p style="font-size: 1rem; color: var(--text-dim);">Portfolio-level discussions are prioritized over individual asset transactions.</p>
     </section>
 
     <hr class="hr-divider">
@@ -203,22 +217,13 @@
 
     <section class="contact-form">
         <h2>For acquisition inquiries or strategic discussions:</h2>
-        <p style="font-size: 1.4rem; color: var(--blue);"><strong>ceall06@proton.me</strong></p>
+        <p style="font-size: 1.5rem; color: var(--blue);"><strong>ceall06@proton.me</strong></p>
         
         <form action="https://formspree.io/f/mkokwebb" method="POST">
             <input type="email" name="email" placeholder="Corporate Email Address" required>
             <textarea name="message" rows="5" placeholder="Strategic proposal or acquisition request..." required></textarea>
             <button type="submit">Contact Registry</button>
         </form>
-
-        <div style="margin-top: 30px; color: var(--text-dim); font-size: 1rem;">
-            <strong>Transaction Options</strong>
-            <ul style="margin-top: 10px;">
-                <li>Secure escrow-supported transfer</li>
-                <li>Marketplace-supported transfer options</li>
-                <li>Structured acquisition discussions available</li>
-            </ul>
-        </div>
     </section>
 
     <footer>
@@ -228,7 +233,6 @@
 
 </body>
 </html>
-
        
  
 
