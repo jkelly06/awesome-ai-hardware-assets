@@ -10,12 +10,13 @@
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', 'G-3JP4ZC1EEN');
+
       function trackDownload() {
         gtag('event', 'download', { 'event_category': 'prospectus', 'event_label': 'sovereign-compute-2026' });
       }
     </script>
 
-    <title>OPTICALPROCESSINGUNIT.COM | Strategic Infrastructure Registry</title>
+    <title>OPTICALPROCESSINGUNIT.COM | Strategic Registry of Optical, Photonic, and XPU Infrastructure Assets</title>
     <style>
         :root {
             --bg: #0d1117; --card: #161b22; --border: #30363d;
@@ -26,16 +27,19 @@
         .container { max-width: 900px; margin: 0 auto; padding: 60px 20px; }
         
         /* Typography */
-        h1 { font-size: 3rem; margin: 0; letter-spacing: -2px; color: var(--blue); }
-        h2 { font-size: 1.8rem; border-bottom: 1px solid var(--border); padding-bottom: 10px; margin-top: 50px; }
+        h1 { font-size: 3rem; margin: 0; letter-spacing: -2px; color: var(--blue); line-height: 1.1; }
+        h2 { font-size: 1.8rem; border-bottom: 1px solid var(--border); padding-bottom: 10px; margin-top: 50px; color: #fff; }
         h3 { color: var(--blue); margin-bottom: 5px; font-size: 1.3rem; }
         p, li { font-size: 1.2rem; color: var(--text-main); }
         ul { list-style: none; padding: 0; }
         li { margin-bottom: 10px; }
         .hr-divider { border: 0; border-top: 1px solid var(--border); margin: 60px 0; }
 
+        /* Hero Image */
+        .visual-anchor { width: 100%; height: auto; border-radius: 12px; margin: 40px 0; border: 1px solid var(--border); display: block; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+
         /* Custom Styles */
-        .hero-box { text-align: left; margin-bottom: 40px; }
+        .hero-box { text-align: left; }
         .bullet-list li::before { content: "• "; color: var(--blue); font-weight: bold; }
         
         .asset-item { margin-bottom: 30px; }
@@ -43,18 +47,20 @@
         .asset-desc { color: var(--text-dim); display: block; margin-top: 5px; }
         
         .extension-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 10px; font-family: monospace; }
-        .extension-item { background: var(--card); padding: 10px 15px; border-radius: 4px; border: 1px solid var(--border); }
+        .extension-item { background: var(--card); padding: 10px 15px; border-radius: 4px; border: 1px solid var(--border); font-size: 1rem; }
 
-        .btn-download { display: inline-block; background: transparent; color: var(--blue); padding: 15px 30px; text-decoration: none; border: 1px solid var(--blue); border-radius: 6px; font-weight: bold; margin-top: 20px; transition: 0.3s; }
+        .btn-download { display: inline-block; background: transparent; color: var(--blue); padding: 15px 30px; text-decoration: none; border: 1px solid var(--blue); border-radius: 6px; font-weight: bold; font-size: 1.1rem; margin-top: 20px; transition: 0.3s; }
         .btn-download:hover { background: var(--blue); color: #fff; }
 
         .contact-form { background: var(--card); padding: 40px; border-radius: 12px; border: 1px solid var(--border); margin-top: 40px; }
-        input, textarea { width: 100%; padding: 15px; margin: 10px 0; background: var(--bg); border: 1px solid var(--border); color: white; border-radius: 6px; box-sizing: border-box; }
+        input, textarea { width: 100%; padding: 15px; margin: 10px 0; background: var(--bg); border: 1px solid var(--border); color: white; border-radius: 6px; box-sizing: border-box; font-size: 1rem; }
         button { background: var(--green); color: white; border: none; padding: 20px; border-radius: 6px; cursor: pointer; font-size: 1.2rem; font-weight: bold; width: 100%; margin-top: 10px; }
         
-        .visual-anchor { width: 100%; height: auto; border-radius: 12px; margin: 40px 0; border: 1px solid var(--border); }
-
-        @media (max-width: 600px) { h1 { font-size: 2rem; } .extension-grid { grid-template-columns: 1fr; } }
+        @media (max-width: 600px) { 
+            h1 { font-size: 2.2rem; } 
+            .container { padding: 40px 15px; }
+            .extension-grid { grid-template-columns: 1fr; } 
+        }
     </style>
 </head>
 <body>
@@ -62,7 +68,7 @@
 <div class="container">
     <header class="hero-box">
         <h1>OPTICALPROCESSINGUNIT.COM</h1>
-        <p class="subtitle" style="font-size: 1.4rem; color: var(--text-dim);">Strategic registry of optical, photonic, and next-generation compute infrastructure assets.</p>
+        <p style="font-size: 1.4rem; color: var(--text-dim); margin-top: 15px;">Category-defining domains for photonic and optical AI infrastructure.</p>
         
         <p>Designed for:</p>
         <ul class="bullet-list">
@@ -71,17 +77,17 @@
             <li>XPU / heterogeneous compute infrastructure</li>
             <li>Sovereign and next-generation hardware stacks</li>
         </ul>
-        <p style="font-style: italic; color: var(--text-dim);">As AI scales, the bottleneck is shifting from raw compute to bandwidth, switching efficiency, and power density.</p>
+        <p style="font-style: italic; color: var(--text-dim); margin-top: 25px;">As AI scales, the bottleneck is shifting from raw compute to bandwidth, power efficiency, and interconnect architecture.</p>
     </header>
 
-    <img src="infrastructure-visual.jpg" alt="Photonic AI Infrastructure" class="visual-anchor">
+    <img src="infrastructure-visual.png" alt="Sovereign Photonic AI Infrastructure" class="visual-anchor">
 
     <hr class="hr-divider">
 
     <section>
         <h2>Market Thesis</h2>
         <p>AI infrastructure is entering a new hardware cycle.</p>
-        <p>As model scale increases, performance is no longer defined by compute alone. It is increasingly determined by memory movement, interconnect speed, switching efficiency, and energy efficiency.</p>
+        <p>As model scale increases, performance is no longer defined by compute alone. It is increasingly determined by memory movement, interconnect speed, switching efficiency, and power density.</p>
         <p>This is driving adoption of:</p>
         <ul class="bullet-list">
             <li>Silicon photonics</li>
@@ -170,19 +176,19 @@
 
     <section>
         <h2>Acquisition Structure</h2>
-        <h3>Individual Asset Acquisition</h3>
+        <h3 style="color:var(--blue); margin-bottom: 10px;">Individual Asset Acquisition</h3>
         <ul class="bullet-list">
             <li>Select assets available individually</li>
             <li>Typical range: $12,500 – $250,000+ depending on strategic fit</li>
         </ul>
         
-        <h3>Strategic Bundle Acquisition</h3>
+        <h3 style="color:var(--blue); margin-bottom: 10px;">Strategic Bundle Acquisition</h3>
         <ul class="bullet-list">
             <li>Curated domain groupings across photonics, OPU, XPU, and QPU layers</li>
             <li>Typical range: mid five-figure to low six-figure valuations</li>
         </ul>
 
-        <h3>Full Registry Acquisition (Preferred)</h3>
+        <h3 style="color:var(--blue); margin-bottom: 10px;">Full Registry Acquisition (Preferred)</h3>
         <ul class="bullet-list">
             <li>Complete ownership of the opticalprocessingunit.com registry stack</li>
         </ul>
@@ -196,18 +202,18 @@
     </section>
 
     <section class="contact-form">
-        <h2>Strategic Inquiry</h2>
-        <p>For acquisition inquiries or strategic discussions:<br><strong>ceall06@proton.me</strong></p>
+        <h2>For acquisition inquiries or strategic discussions:</h2>
+        <p style="font-size: 1.4rem; color: var(--blue);"><strong>ceall06@proton.me</strong></p>
         
         <form action="https://formspree.io/f/mkokwebb" method="POST">
             <input type="email" name="email" placeholder="Corporate Email Address" required>
             <textarea name="message" rows="5" placeholder="Strategic proposal or acquisition request..." required></textarea>
-            <button type="submit">Initialize Discussion</button>
+            <button type="submit">Contact Registry</button>
         </form>
 
-        <div style="margin-top: 30px; color: var(--text-dim); font-size: 0.9rem;">
+        <div style="margin-top: 30px; color: var(--text-dim); font-size: 1rem;">
             <strong>Transaction Options</strong>
-            <ul style="margin-top: 5px;">
+            <ul style="margin-top: 10px;">
                 <li>Secure escrow-supported transfer</li>
                 <li>Marketplace-supported transfer options</li>
                 <li>Structured acquisition discussions available</li>
@@ -216,7 +222,7 @@
     </section>
 
     <footer>
-        <p style="text-align: center; color: var(--text-dim); margin-top: 60px;">© 2026 Sovereign Hardware Group</p>
+        <p style="text-align: center; color: var(--text-dim); margin-top: 60px; font-size: 0.9rem;">© 2026 Sovereign Hardware Group</p>
     </footer>
 </div>
 
