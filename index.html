@@ -10,132 +10,213 @@
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', 'G-3JP4ZC1EEN');
-
       function trackDownload() {
         gtag('event', 'download', { 'event_category': 'prospectus', 'event_label': 'sovereign-compute-2026' });
       }
     </script>
 
-    <title>Sovereign Compute Infrastructure Prospectus | opticalprocessingunit.com</title>
-    <meta name="description" content="Strategic acquisition registry for Silicon Photonics, OPU, XPU, and Quantum infrastructure.">
-    <link rel="canonical" href="https://opticalprocessingunit.com">
-
+    <title>OPTICALPROCESSINGUNIT.COM | Strategic Infrastructure Registry</title>
     <style>
         :root {
             --bg: #0d1117; --card: #161b22; --border: #30363d;
             --text-main: #f0f6fc; --text-dim: #8b949e;
             --blue: #58a6ff; --green: #3fb950; --gold: #d29922;
-            --font-base: 20px; 
         }
-        body { background-color: var(--bg); color: var(--text-main); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; margin: 0; line-height: 1.6; font-size: var(--font-base); }
-        .container { max-width: 1100px; margin: 0 auto; padding: 60px 20px; }
-        header { border-bottom: 1px solid var(--border); padding-bottom: 50px; margin-bottom: 50px; text-align: center; }
-        h1 { font-size: 3.5rem; margin: 0; letter-spacing: -1px; }
-        .subtitle { color: var(--text-dim); font-size: 1.5rem; margin-top: 15px; }
-        .btn-download { display: inline-block; background: var(--blue); color: #ffffff; padding: 22px 45px; text-decoration: none; border-radius: 8px; font-weight: bold; font-size: 1.4rem; margin-top: 30px; transition: transform 0.2s; }
-        .btn-download:hover { transform: scale(1.02); background: #1f6feb; }
-        .section-title { font-size: 2.2rem; color: var(--blue); margin-top: 70px; margin-bottom: 30px; border-left: 5px solid var(--blue); padding-left: 20px; }
-        .asset-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(450px, 1fr)); gap: 20px; }
+        body { background-color: var(--bg); color: var(--text-main); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; margin: 0; line-height: 1.6; }
+        .container { max-width: 900px; margin: 0 auto; padding: 60px 20px; }
         
-        .asset-card { 
-            background: var(--card); border: 1px solid var(--border); 
-            padding: 25px 30px; border-radius: 12px; 
-            display: flex; justify-content: space-between; align-items: center;
-            overflow-wrap: break-word; word-wrap: break-word; word-break: break-all;
-        }
+        /* Typography */
+        h1 { font-size: 3rem; margin: 0; letter-spacing: -2px; color: var(--blue); }
+        h2 { font-size: 1.8rem; border-bottom: 1px solid var(--border); padding-bottom: 10px; margin-top: 50px; }
+        h3 { color: var(--blue); margin-bottom: 5px; font-size: 1.3rem; }
+        p, li { font-size: 1.2rem; color: var(--text-main); }
+        ul { list-style: none; padding: 0; }
+        li { margin-bottom: 10px; }
+        .hr-divider { border: 0; border-top: 1px solid var(--border); margin: 60px 0; }
 
-        .domain-name { font-size: 1.4rem; font-family: monospace; font-weight: 600; padding-right: 10px; }
-        .price { font-size: 1.5rem; color: var(--green); font-weight: 800; white-space: nowrap; }
-        .thesis-box { background: #1c2128; padding: 40px; border-radius: 15px; border: 1px solid var(--border); font-size: 1.4rem; margin-bottom: 50px; }
-        .contact-form { background: var(--card); padding: 50px; border-radius: 15px; border: 1px solid var(--border); margin-top: 80px; }
-        input, textarea { width: 100%; padding: 18px; margin: 15px 0; background: var(--bg); border: 1px solid var(--border); color: white; font-size: 1.2rem; border-radius: 8px; box-sizing: border-box; }
-        button { background: var(--green); color: white; border: none; padding: 22px; border-radius: 8px; cursor: pointer; font-size: 1.4rem; font-weight: bold; width: 100%; }
-        footer { text-align: center; padding: 80px 0; color: var(--text-dim); font-size: 1.1rem; border-top: 1px solid var(--border); }
+        /* Custom Styles */
+        .hero-box { text-align: left; margin-bottom: 40px; }
+        .bullet-list li::before { content: "• "; color: var(--blue); font-weight: bold; }
+        
+        .asset-item { margin-bottom: 30px; }
+        .asset-name { font-family: monospace; font-size: 1.4rem; font-weight: bold; color: var(--gold); }
+        .asset-desc { color: var(--text-dim); display: block; margin-top: 5px; }
+        
+        .extension-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 10px; font-family: monospace; }
+        .extension-item { background: var(--card); padding: 10px 15px; border-radius: 4px; border: 1px solid var(--border); }
 
-        @media (max-width: 600px) { 
-            h1 { font-size: 2.2rem; } 
-            .container { padding: 30px 15px; }
-            .asset-grid { grid-template-columns: 1fr; } 
-            .asset-card { flex-direction: column; text-align: center; padding: 20px; }
-            .domain-name { font-size: 1.1rem; padding-right: 0; padding-bottom: 10px; }
-            .price { font-size: 1.3rem; }
-            .section-title { font-size: 1.6rem; }
-            .anchor-domain { font-size: 1.5rem !important; }
-        }
+        .btn-download { display: inline-block; background: transparent; color: var(--blue); padding: 15px 30px; text-decoration: none; border: 1px solid var(--blue); border-radius: 6px; font-weight: bold; margin-top: 20px; transition: 0.3s; }
+        .btn-download:hover { background: var(--blue); color: #fff; }
+
+        .contact-form { background: var(--card); padding: 40px; border-radius: 12px; border: 1px solid var(--border); margin-top: 40px; }
+        input, textarea { width: 100%; padding: 15px; margin: 10px 0; background: var(--bg); border: 1px solid var(--border); color: white; border-radius: 6px; box-sizing: border-box; }
+        button { background: var(--green); color: white; border: none; padding: 20px; border-radius: 6px; cursor: pointer; font-size: 1.2rem; font-weight: bold; width: 100%; margin-top: 10px; }
+        
+        .visual-anchor { width: 100%; height: auto; border-radius: 12px; margin: 40px 0; border: 1px solid var(--border); }
+
+        @media (max-width: 600px) { h1 { font-size: 2rem; } .extension-grid { grid-template-columns: 1fr; } }
     </style>
 </head>
 <body>
 
 <div class="container">
-    <header>
-        <h1>2026 Sovereign Compute Registry</h1>
-        <p class="subtitle">Official Registry: <a href="https://opticalprocessingunit.com" style="color:var(--blue); text-decoration:none;">opticalprocessingunit.com</a></p>
-        <a href="prospectus-2026-sovereign-compute.pdf" class="btn-download" onclick="trackDownload()" download>📥 Download Master Prospectus (PDF)</a>
+    <header class="hero-box">
+        <h1>OPTICALPROCESSINGUNIT.COM</h1>
+        <p class="subtitle" style="font-size: 1.4rem; color: var(--text-dim);">Strategic registry of optical, photonic, and next-generation compute infrastructure assets.</p>
+        
+        <p>Designed for:</p>
+        <ul class="bullet-list">
+            <li>Silicon photonics platforms</li>
+            <li>Optical interconnect and switching systems</li>
+            <li>XPU / heterogeneous compute infrastructure</li>
+            <li>Sovereign and next-generation hardware stacks</li>
+        </ul>
+        <p style="font-style: italic; color: var(--text-dim);">As AI scales, the bottleneck is shifting from raw compute to bandwidth, switching efficiency, and power density.</p>
     </header>
 
-    <main>
-        <div class="thesis-box">
-            <h2 style="margin-top:0; font-size: 1.8rem;">Market Thesis</h2>
-            <p>The 2026 AI infrastructure pivot demands a transition to <strong>Silicon Photonics</strong>, <strong>SMR-backed Energy</strong>, and <strong>Heterogeneous XPU</strong> fabrics. This registry contains the primary namespaces defining the next-generation hardware stack.</p>
-        </div>
+    <img src="infrastructure-visual.jpg" alt="Photonic AI Infrastructure" class="visual-anchor">
 
-        <h2 class="section-title">The Category Anchor</h2>
-        <div class="asset-card" style="border: 2px solid var(--gold); padding: 40px; flex-direction: column;">
-            <span class="domain-name anchor-domain" style="font-size: 2rem; margin-bottom: 15px;">opticalprocessingunit.com</span>
-            <span class="price" style="font-size: 2.2rem;">$250,000</span>
-        </div>
+    <hr class="hr-divider">
 
-        <h2 class="section-title">Optical Circuit Switching & Fabric</h2>
-        <div class="asset-grid">
-            <div class="asset-card"><span class="domain-name">ocsfabric.com</span><span class="price">$75,000</span></div>
-            <div class="asset-card"><span class="domain-name">photonicbus.com</span><span class="price">$45,000</span></div>
-            <div class="asset-card"><span class="domain-name">cposwitch.com</span><span class="price">$35,000</span></div>
-            <div class="asset-card"><span class="domain-name">ocsstack.com</span><span class="price">$25,000</span></div>
-            <div class="asset-card"><span class="domain-name">opufabric.com</span><span class="price">$18,500</span></div>
-        </div>
+    <section>
+        <h2>Market Thesis</h2>
+        <p>AI infrastructure is entering a new hardware cycle.</p>
+        <p>As model scale increases, performance is no longer defined by compute alone. It is increasingly determined by memory movement, interconnect speed, switching efficiency, and energy efficiency.</p>
+        <p>This is driving adoption of:</p>
+        <ul class="bullet-list">
+            <li>Silicon photonics</li>
+            <li>Optical circuit switching</li>
+            <li>Heterogeneous XPU architectures</li>
+            <li>New processing and interconnect layers</li>
+        </ul>
+        <p><strong>The naming layer for this hardware stack is forming now.</strong></p>
+    </section>
 
-        <h2 class="section-title">Logic, Inference & Agents</h2>
-        <div class="asset-grid">
-            <div class="asset-card"><span class="domain-name">xpuinference.com</span><span class="price">$65,000</span></div>
-            <div class="asset-card"><span class="domain-name">agenticxpu.com</span><span class="price">$45,000</span></div>
-            <div class="asset-card"><span class="domain-name">cpocampus.com</span><span class="price">$20,000</span></div>
-        </div>
+    <hr class="hr-divider">
 
-        <h2 class="section-title">Power, Compute & Core Nodes</h2>
-        <div class="asset-grid">
-            <div class="asset-card"><span class="domain-name">terawattcore.com</span><span class="price">$50,000</span></div>
-            <div class="asset-card"><span class="domain-name">exawattcore.com</span><span class="price">$35,000</span></div>
-            <div class="asset-card"><span class="domain-name">opucluster.com</span><span class="price">$25,000</span></div>
-            <div class="asset-card"><span class="domain-name">opuarray.com</span><span class="price">$18,500</span></div>
-            <div class="asset-card"><span class="domain-name">opunode.com</span><span class="price">$12,500</span></div>
-            <div class="asset-card"><span class="domain-name">opustack.com</span><span class="price">$12,500</span></div>
-        </div>
+    <section>
+        <h2>Best Fit For</h2>
+        <ul class="bullet-list">
+            <li>Silicon photonics startups</li>
+            <li>Optical interconnect and switching platforms</li>
+            <li>XPU / heterogeneous compute companies</li>
+            <li>Sovereign compute and next-generation hardware programs</li>
+            <li>Infrastructure buyers seeking category-level control</li>
+        </ul>
+    </section>
 
-        <h2 class="section-title">Quantum (QPU) Infrastructure</h2>
-        <div class="asset-grid">
-            <div class="asset-card"><span class="domain-name">qpucluster.com</span><span class="price">$25,000</span></div>
-            <div class="asset-card"><span class="domain-name">qpufabric.com</span><span class="price">$18,500</span></div>
-            <div class="asset-card"><span class="domain-name">qpuarray.com</span><span class="price">$12,500</span></div>
-            <div class="asset-card"><span class="domain-name">photonqpu.com</span><span class="price">$12,500</span></div>
-            <div class="asset-card"><span class="domain-name">qpugrid.com</span><span class="price">$10,000</span></div>
-            <div class="asset-card"><span class="domain-name">qpumesh.com</span><span class="price">$10,000</span></div>
-        </div>
+    <hr class="hr-divider">
 
-        <div class="contact-form">
-            <h2 style="margin-top:0;">Institutional Inquiry</h2>
-            <p style="font-size: 1.4rem;">Registry Contact: <strong>ceall06@proton.me</strong></p>
-            <form action="https://formspree.io/f/mkokwebb" method="POST">
-                <input type="hidden" name="_subject" value="Registry Inquiry: Institutional">
-                <input type="email" name="email" placeholder="Corporate Email Address" required>
-                <textarea name="message" rows="5" placeholder="Strategic proposal or acquisition request..." required></textarea>
-                <button type="submit">Initialize Acquisition Dialogue</button>
-            </form>
+    <section>
+        <h2>Featured Assets</h2>
+        <div class="asset-item">
+            <span class="asset-name">1. opticalprocessingunit.com</span>
+            <span class="asset-desc">Primary category anchor for optical compute positioning</span>
         </div>
-    </main>
+        <div class="asset-item">
+            <span class="asset-name">2. ocsfabric.com</span>
+            <span class="asset-desc">Optical circuit switching and photonic interconnect layer</span>
+        </div>
+        <div class="asset-item">
+            <span class="asset-name">3. xpuinference.com</span>
+            <span class="asset-desc">Inference infrastructure aligned with heterogeneous compute</span>
+        </div>
+        <div class="asset-item">
+            <span class="asset-name">4. agenticxpu.com</span>
+            <span class="asset-desc">Agentic systems built on next-generation XPU architecture</span>
+        </div>
+        <div class="asset-item">
+            <span class="asset-name">5. photonicbus.com</span>
+            <span class="asset-desc">Photonic transport and high-speed data movement layer</span>
+        </div>
+    </section>
+
+    <section>
+        <h2>Strategic Extensions</h2>
+        <div class="extension-grid">
+            <div class="extension-item">cposwitch.com</div>
+            <div class="extension-item">ocsstack.com</div>
+            <div class="extension-item">opufabric.com</div>
+            <div class="extension-item">cpocampus.com</div>
+            <div class="extension-item">opucluster.com</div>
+            <div class="extension-item">opuarray.com</div>
+            <div class="extension-item">opunode.com</div>
+            <div class="extension-item">opustack.com</div>
+            <div class="extension-item">terawattcore.com</div>
+            <div class="extension-item">exawattcore.com</div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Quantum Infrastructure Layer</h2>
+        <div class="extension-grid">
+            <div class="extension-item">qpucluster.com</div>
+            <div class="extension-item">qpufabric.com</div>
+            <div class="extension-item">qpuarray.com</div>
+            <div class="extension-item">photonqpu.com</div>
+            <div class="extension-item">qpugrid.com</div>
+            <div class="extension-item">qpumesh.com</div>
+        </div>
+    </section>
+
+    <hr class="hr-divider">
+
+    <section>
+        <h2>Why This Window Matters</h2>
+        <p>As next-generation hardware categories mature, naming decisions are made early.</p>
+        <p>Once a platform, architecture, or interconnect layer is branded, comparable assets become harder to replace and more expensive to assemble.</p>
+        <p><strong>Early acquisition secures positioning. Late acquisition requires compromise.</strong></p>
+    </section>
+
+    <section>
+        <h2>Acquisition Structure</h2>
+        <h3>Individual Asset Acquisition</h3>
+        <ul class="bullet-list">
+            <li>Select assets available individually</li>
+            <li>Typical range: $12,500 – $250,000+ depending on strategic fit</li>
+        </ul>
+        
+        <h3>Strategic Bundle Acquisition</h3>
+        <ul class="bullet-list">
+            <li>Curated domain groupings across photonics, OPU, XPU, and QPU layers</li>
+            <li>Typical range: mid five-figure to low six-figure valuations</li>
+        </ul>
+
+        <h3>Full Registry Acquisition (Preferred)</h3>
+        <ul class="bullet-list">
+            <li>Complete ownership of the opticalprocessingunit.com registry stack</li>
+        </ul>
+        <p style="font-size: 1rem; color: var(--text-dim);">Portfolio-level discussions are prioritized over individual asset transactions. Selective availability applies to primary assets.</p>
+    </section>
+
+    <hr class="hr-divider">
+
+    <section style="text-align: center;">
+        <a href="prospectus-2026-sovereign-compute.pdf" class="btn-download" onclick="trackDownload()" download>View Full Master Prospectus (optional)</a>
+    </section>
+
+    <section class="contact-form">
+        <h2>Strategic Inquiry</h2>
+        <p>For acquisition inquiries or strategic discussions:<br><strong>ceall06@proton.me</strong></p>
+        
+        <form action="https://formspree.io/f/mkokwebb" method="POST">
+            <input type="email" name="email" placeholder="Corporate Email Address" required>
+            <textarea name="message" rows="5" placeholder="Strategic proposal or acquisition request..." required></textarea>
+            <button type="submit">Initialize Discussion</button>
+        </form>
+
+        <div style="margin-top: 30px; color: var(--text-dim); font-size: 0.9rem;">
+            <strong>Transaction Options</strong>
+            <ul style="margin-top: 5px;">
+                <li>Secure escrow-supported transfer</li>
+                <li>Marketplace-supported transfer options</li>
+                <li>Structured acquisition discussions available</li>
+            </ul>
+        </div>
+    </section>
 
     <footer>
-        <p>Transfer via Secure Escrow: Escrow.com / Dan.com</p>
-        <p>© 2026 Sovereign Hardware Group</p>
+        <p style="text-align: center; color: var(--text-dim); margin-top: 60px;">© 2026 Sovereign Hardware Group</p>
     </footer>
 </div>
 
